@@ -8,6 +8,10 @@ const Content = () => {
             <div className="coverImageContainer">
                 <div className="coverImage"></div>
                 <div className="screenOverlay"></div>
+                <div className="coverContent">
+                    <i className="screen-icon fa-brands fa-codepen"></i>
+                    <span className="name" data-value="CODEPEN">CODEPEN</span>
+                </div>
             </div>
             <div class="container">
                 <div class="row">

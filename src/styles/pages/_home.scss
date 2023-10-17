@@ -41,6 +41,7 @@
   width: 100%;
   animation: pan-overlay 22s infinite linear;
   z-index: 2;
+  position: absolute;
 }
 
 @keyframes pan-overlay {
@@ -118,4 +119,29 @@
   // filter: sepia(100%) hue-rotate(160deg);
   opacity: 0.8;
   animation: pan-image 15s linear infinite;
+}
+
+.coverContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  gap: 4rem;
+  position: relative;
+  z-index: 3;
+  margin: 1rem;
+  padding-bottom: 6rem;
+  border: 1px solid rgba($rgbBlueCover, 0.5);
+  border-radius: 0.6rem;
+}
+
+.name{
+  font-family: "Source Code Pro", monospace;
+  color: white; 
+  text-align: center;
+  text-transform: uppercase; 
+  position: relative;
+  font-size: 4.25rem;
+  font-weight: 400;
 }
