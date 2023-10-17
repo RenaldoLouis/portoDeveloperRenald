@@ -1,10 +1,13 @@
 import React from "react";
-import homeCard from "../../assets/images/spiderman.jpg"
+import homeCard from "../../assets/images/background.jpg"
 
 const Content = () => {
 
     return (
         <>
+            <div className="coverImageContainer">
+                <div className="screenOverlay"></div>
+            </div>
             <img className="home-coverImage" src={homeCard} alt="Italian Trulli" />
             <div class="container">
                 <div class="row">
