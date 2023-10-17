@@ -6,9 +6,9 @@ const Content = () => {
     return (
         <>
             <div className="coverImageContainer">
+                <div className="coverImage"></div>
                 <div className="screenOverlay"></div>
             </div>
-            <img className="home-coverImage" src={homeCard} alt="Italian Trulli" />
             <div class="container">
                 <div class="row">
                     <div class="col">
