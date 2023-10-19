@@ -3,6 +3,7 @@
     padding: 0px 15px 0px 15px !important;
     position: absolute !important;
     z-index: 5;
+    margin-top: 20px;
     width: 100%;
     &-background {
         background-color: $navbarColor;
@@ -59,4 +60,14 @@
         color: $color-light;
         font-size: 14px;
     }
+}
+
+.active{
+    background-color: white !important;
+    border-radius: 25px !important;
+}
+
+.buttonTransition{
+  transition-timing-function: ease-in !important;
+  transition: 0.5s !important;
 }

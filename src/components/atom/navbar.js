@@ -29,7 +29,7 @@ const Navbar = () => {
             <ul className="nav nav-pills">
                 {listNavbarMenu.map((eachMenu, index) => (
                     <li className="nav-item" onClick={() => handleClickNavbar(`menuNavbar${index + 1}`)}>
-                        <div className={`nav-link ${selectedItem === `menuNavbar${index + 1}` ? "active" : ""}`} style={{color: "black", cursor: "pointer"}}>
+                        <div className={`buttonTransition nav-link ${selectedItem === `menuNavbar${index + 1}` ? "active" : ""}`} style={{color: "black", cursor: "pointer"}}>
                             {eachMenu.title}
                         </div>
                     </li>
