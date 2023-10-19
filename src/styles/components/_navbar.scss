@@ -1,6 +1,9 @@
 .navbar {
     height: 50px;
     padding: 0px 15px 0px 15px !important;
+    position: absolute !important;
+    z-index: 5;
+    width: 100%;
     &-background {
         background-color: $navbarColor;
     }

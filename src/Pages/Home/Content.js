@@ -1,5 +1,6 @@
 import React from "react";
 import homeCard from "../../assets/images/background.jpg"
+import Navbar from "../../components/atom/navbar";
 
 const Content = () => {
 
@@ -8,9 +9,10 @@ const Content = () => {
             <div className="coverImageContainer">
                 <div className="coverImage"></div>
                 <div className="screenOverlay"></div>
+                <Navbar />
                 <div className="coverContent">
                     <i className="screen-icon fa-brands fa-codepen"></i>
-                    <span className="name" data-value="CODEPEN">CODEPEN</span>
+                    <span className="name">Fernando Renaldo Louis</span>
                 </div>
             </div>
             <div class="container">
