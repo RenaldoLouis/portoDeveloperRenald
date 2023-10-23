@@ -1,54 +1,10 @@
 import React from "react";
-import homeCard from "../../assets/images/background.jpg"
-import Navbar from "../../components/atom/navbar";
+import Cover from "../../components/molecules/Cover";
 
 const Content = () => {
-    const softSkill = [
-        {
-            name: "Javascript"
-        },
-        {
-            name: "Golang"
-        },
-        {
-            name: "ReactJs"
-        },
-        {
-            name: "React"
-        },
-        {
-            name: "NodeJs"
-        },
-        {
-            name: "Flutter"
-        },
-        {
-            name: "Springboot"
-        },
-
-    ]
     return (
         <>
-            <div className="coverImageContainer">
-                <div className="coverImage"></div>
-                <div className="screenOverlay"></div>
-                <Navbar />
-                <div className="coverContent">
-                    <span className="navbarText navbarText-medium">A Full Stack Web Developer and Mobile App Developer</span>
-                    <span className="navbarText navbarText-big">Fernando Renaldo Louis</span>
-                    <div>
-                        SEE RESUME
-                    </div>
-                    <span className="navbarText navbarText-small">Building web & application with</span>
-                    <div>
-                        {softSkill.map((eachSkill) => (
-                            <div>
-                                {eachSkill.name}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+            <Cover />
             <div class="container">
                 <div class="row">
                     <div class="col">

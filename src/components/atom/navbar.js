@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import navbarIcon from '../../assets/images/FRLIcon.svg';
 
 const listNavbarMenu = [
@@ -24,12 +24,12 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <img src={navbarIcon} alt="ang" ></img>
+            <img className="logoContainer" src={navbarIcon} alt="ang" ></img>
 
             <ul className="nav nav-pills">
                 {listNavbarMenu.map((eachMenu, index) => (
                     <li className="nav-item" onClick={() => handleClickNavbar(`menuNavbar${index + 1}`)}>
-                        <div className={`buttonTransition nav-link ${selectedItem === `menuNavbar${index + 1}` ? "active" : ""}`} style={{color: "black", cursor: "pointer"}}>
+                        <div className={`buttonTransition nav-link ${selectedItem === `menuNavbar${index + 1}` ? "active" : ""}`} style={{ color: "black", cursor: "pointer" }}>
                             {eachMenu.title}
                         </div>
                     </li>
