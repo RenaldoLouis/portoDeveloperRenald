@@ -3,6 +3,9 @@ import navbarIcon from '../../assets/images/FRLIcon.svg';
 
 const listNavbarMenu = [
     {
+        title: "Cover"
+    },
+    {
         title: "Services"
     },
     {

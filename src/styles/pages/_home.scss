@@ -173,3 +173,30 @@
   gap: 10px;
   margin-top: 34px;
 }
+
+.sectionTitle{
+  color: #101010;
+  text-align: center;
+  font-family: Tomorrow;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 120px */
+}
+
+.sectionTitleContainer{
+  display: flex;
+ justify-content: center;
+}
+
+.servicesWhiteBox{
+  width: 532px;
+  height: 312px;
+  border-radius: 8px;
+  border: 1px solid #E7E7E7;
+  background: #FFF;
+}
+
+.ServicesContainer{
+  gap: 50px !important;
+}
