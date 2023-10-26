@@ -29,11 +29,14 @@ const softSkill = [
 ]
 
 const Cover = () => {
+    const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
     const [currentlyHoveredText, setCurrentlyHoveredText] = useState(null)
 
     const handleHoverContent = (elementId) => {
         setCurrentlyHoveredText(elementId)
     }
+
+
 
     return (
         <div>
@@ -44,7 +47,44 @@ const Cover = () => {
                 <div className="coverContent">
                     <span className="navbarText navbarText-medium" style={{ zIndex: 5 }}>A Full Stack Web Developer and Mobile App Developer</span>
 
-                    <span onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text1")} id="text1" className="navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text1" ? 7 : 5 }}>Renaldo</span>
+                    <p onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text1")} id="text1" className="fancy navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text1" ? 7 : 5 }}>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${1 * 1000}ms` }}>R</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${2 * 1000}ms` }}>E</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${3 * 1000}ms` }}>N</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${4 * 1000}ms` }}>A</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${5 * 1000}ms` }}>L</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${6 * 1000}ms` }}>D</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${7 * 1000}ms` }}>O</span>
+                            </span>
+                        </span>
+                    </p>
+
                     <span onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text2")} id="text2" className="navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text2" ? 7 : 5 }}>Louis</span>
 
                     <div className="resumeButtonContainer" style={{ zIndex: 5 }}>
