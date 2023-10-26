@@ -35,7 +35,7 @@ const Cover = () => {
                 <Navbar />
                 <div className="coverContent">
                     <span className="navbarText navbarText-medium">A Full Stack Web Developer and Mobile App Developer</span>
-                    <span style={{ width: "32rem", lineHeight: "100%", textAlign: "center" }} className="navbarText navbarText-big">Renaldo Louis</span>
+                    <span className="navbarText navbarText-big nameTitle">Renaldo Louis</span>
                     <div className="resumeButtonContainer">
                         SEE RESUME
                     </div>
