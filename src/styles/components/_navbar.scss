@@ -1,10 +1,11 @@
 .navbar {
-    height: 50px;
-    padding: 0px 15px 0px 15px !important;
-    position: absolute !important;
-    z-index: 5;
-    margin-top: 20px;
+    height: 70px;
+    padding: 10px 15px 10px 15px !important;
+    position: fixed !important;
+    top: 0;
+    z-index: 11;
     width: 100%;
+
     &-background {
         background-color: $navbarColor;
     }
@@ -52,7 +53,7 @@
 
         &:hover,
         &:active {
-            background-color: rgba($color-light, .2);
+            background-color: rgba($color-light, 0.2);
         }
     }
 
@@ -62,19 +63,28 @@
     }
 }
 
-.active{
+.active {
     background-color: white !important;
     border-radius: 25px !important;
 }
 
-.buttonTransition{
-  transition-timing-function: ease-in !important;
-  transition: 0.5s !important;
+.activeBlack {
+    background-color: black !important;
+    border-radius: 25px !important;
 }
 
-.logoContainer{
+.easeInTransition {
+    transition-timing-function: ease-in !important;
+    transition: 0.5s !important;
+}
+
+.logoContainer {
     background: white;
     padding: 3px;
     margin-left: 5px;
     border-radius: 15px;
+}
+
+.whiteBackground {
+    background-color: white;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import {DataContextProvider} from "./context/DataContext";
-import {ToastContainer} from "react-toastify";
+import { DataContextProvider } from "./context/DataContext";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
   BrowserRouter as Router,

@@ -43,7 +43,7 @@ const Cover = () => {
             <div className="coverImageContainer">
                 <div className="coverImage"></div>
                 <div className="screenOverlay"></div>
-                <Navbar />
+                {/* <Navbar /> */}
                 <div className="coverContent">
                     <span className="navbarText navbarText-medium" style={{ zIndex: 5 }}>A Full Stack Web Developer and Mobile App Developer</span>
 

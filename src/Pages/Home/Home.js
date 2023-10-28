@@ -5,6 +5,7 @@ import Content from "./Content";
 const Home = () => {
     return (
         <div style={{ background: "black" }}>
+            <Navbar />
             <Content />
             <div className="footer">
                 <p>Footer</p>
