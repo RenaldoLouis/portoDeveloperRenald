@@ -16,7 +16,7 @@ const Services = () => {
                         <div className="servicesHeader">
                             <img src={codeBlock} alt="codeBlock" style={{ marginRight: 42 }}></img>
                             <div>
-                                Full Stack Development
+                                Website Full Stack Development
                             </div>
                         </div>
                         <div style={{ margin: 25 }}>
@@ -31,7 +31,7 @@ const Services = () => {
                         <div className="servicesHeader">
                             <img src={codeBlock} alt="codeBlock" style={{ marginRight: 42 }}></img>
                             <div>
-                                Full Stack Development
+                                Mobile Application Full Stack Development
                             </div>
                         </div>
                         <div style={{ margin: 25 }}>
