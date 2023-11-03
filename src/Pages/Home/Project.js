@@ -12,13 +12,28 @@ const Projects = () => {
             <div className=" projectCardContainer">
                 <div className="projectCard">
                     <div className="projectExpContainer">
-                        asd
+                        <p class="text">Your Text Here</p>
+
                     </div>
                 </div>
-
-                <div class="box">
-                    <div class="black-background">
+                <div className="projectCard">
+                    <div className="projectExpContainer">
                         <p class="text">Your Text Here</p>
+
+                    </div>
+                </div>
+            </div>
+            <div className=" projectCardContainer">
+                <div className="projectCard">
+                    <div className="projectExpContainer">
+                        <p class="text">Your Text Here</p>
+
+                    </div>
+                </div>
+                <div className="projectCard">
+                    <div className="projectExpContainer">
+                        <p class="text">Your Text Here</p>
+
                     </div>
                 </div>
             </div>
