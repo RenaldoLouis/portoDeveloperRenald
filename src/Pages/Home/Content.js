@@ -13,8 +13,6 @@ const Content = () => {
                 <Projects />
                 <Experience />
             </div>
-
-
         </div>
     )
 }

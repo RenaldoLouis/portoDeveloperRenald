@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import PublicRoute from "./PublicRoute";
 import Home from "./Pages/Home/Home";
+import 'animate.css';
 
 const Main = () => {
   return (

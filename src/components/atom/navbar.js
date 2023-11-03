@@ -33,7 +33,6 @@ const Navbar = () => {
     }, [])
 
     window.addEventListener("scroll", function () {
-        console.log("window.scrollY", window.scrollY)
         if (navbarElement) {
             if (window.scrollY === 0) {
                 navbarElement.classList.remove("whiteBackground");

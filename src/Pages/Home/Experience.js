@@ -10,7 +10,7 @@ const Experience = () => {
                 </span>
             </div>
 
-            <div style={{ paddingBottom: 25 }}>
+            <div className="container" style={{ paddingBottom: 25 }}>
                 <div>
                     asd
                 </div>
