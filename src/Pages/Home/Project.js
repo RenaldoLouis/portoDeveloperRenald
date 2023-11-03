@@ -4,19 +4,19 @@ const Projects = () => {
 
     const projectData = [
         {
-            title: "Jumlaty", desc: "jumlaty desc"
+            title: "Jumlaty", desc: "Ecommerce for Grocery"
         },
         {
-            title: "Hisabi", desc: "jumlaty desc"
+            title: "Hisabi", desc: "Record & Track Inventory"
         },
         {
-            title: "RawatKulit", desc: "jumlaty desc"
+            title: "RawatKulit", desc: "Informative Web"
         },
         {
-            title: "Masareefy", desc: "jumlaty desc"
+            title: "Masareefy", desc: "Track Expenses"
         },
         {
-            title: "Alphaverse", desc: "jumlaty desc"
+            title: "Alphaverse", desc: "NFT Wallet"
         },
 
     ]
@@ -28,40 +28,64 @@ const Projects = () => {
                     Projects
                 </span>
             </div>
-
             <div className=" projectCardContainer">
                 <div className="projectCard">
                     <div className="projectExpContainer">
-                        <p class="title-text">Jumlaty</p>
-                        <p class="text">Ecommerce for Grocery</p>
+                        <div>
+                            <div class="title-text">Jumlaty</div>
+                            <div class="text">Ecommerce for Grocery</div>
+                        </div>
+                        <div className="seeAppButon">
+                            SEE APP
+                        </div>
                     </div>
                 </div>
                 <div className="projectCard">
                     <div className="projectExpContainer">
-                        <p class="text">Your Text Here</p>
-
+                        <div>
+                            <div class="title-text">Jumlaty</div>
+                            <div class="text">Ecommerce for Grocery</div>
+                        </div>
+                        <div className="seeAppButon">
+                            SEE APP
+                        </div>
                     </div>
                 </div>
             </div>
             <div className=" projectCardContainer">
                 <div className="projectCard">
                     <div className="projectExpContainer">
-                        <p class="text">Your Text Here</p>
-
+                        <div>
+                            <div class="title-text">Jumlaty</div>
+                            <div class="text">Ecommerce for Grocery</div>
+                        </div>
+                        <div className="seeAppButon">
+                            SEE APP
+                        </div>
                     </div>
                 </div>
                 <div className="projectCard">
                     <div className="projectExpContainer">
-                        <p class="text">Your Text Here</p>
-
+                        <div>
+                            <div class="title-text">Jumlaty</div>
+                            <div class="text">Ecommerce for Grocery</div>
+                        </div>
+                        <div className="seeAppButon">
+                            SEE APP
+                        </div>
                     </div>
                 </div>
             </div>
             <div className=" projectCardContainer">
                 <div className="projectCard">
                     <div className="projectExpContainer">
-                        <p class="text">Your Text Here</p>
-
+                        <div>
+                            <div class="title-text">Jumlaty</div>
+                            <div class="text">Ecommerce for Grocery</div>
+                        </div>
+                        <div className="seeAppButon">
+                            SEE APP
+                        </div>
                     </div>
                 </div>
             </div>
