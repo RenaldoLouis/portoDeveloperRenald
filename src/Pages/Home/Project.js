@@ -28,69 +28,23 @@ const Projects = () => {
                     Projects
                 </span>
             </div>
-            <div className=" projectCardContainer">
-                <div className="projectCard">
-                    <div className="projectExpContainer">
-                        <div>
-                            <div class="title-text">Jumlaty</div>
-                            <div class="text">Ecommerce for Grocery</div>
+            <div className="container">
+                <div className=" projectCardContainer">
+                    {projectData.map((eachProject) => (
+                        <div id={eachProject.title} className="projectCard">
+                            <div className="projectExpContainer">
+                                <div>
+                                    <div class="title-text">{eachProject.title}</div>
+                                    <div class="text">{eachProject.desc}</div>
+                                </div>
+                                <div className="seeAppButon">
+                                    SEE APP
+                                </div>
+                            </div>
                         </div>
-                        <div className="seeAppButon">
-                            SEE APP
-                        </div>
-                    </div>
-                </div>
-                <div className="projectCard">
-                    <div className="projectExpContainer">
-                        <div>
-                            <div class="title-text">Jumlaty</div>
-                            <div class="text">Ecommerce for Grocery</div>
-                        </div>
-                        <div className="seeAppButon">
-                            SEE APP
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
-            <div className=" projectCardContainer">
-                <div className="projectCard">
-                    <div className="projectExpContainer">
-                        <div>
-                            <div class="title-text">Jumlaty</div>
-                            <div class="text">Ecommerce for Grocery</div>
-                        </div>
-                        <div className="seeAppButon">
-                            SEE APP
-                        </div>
-                    </div>
-                </div>
-                <div className="projectCard">
-                    <div className="projectExpContainer">
-                        <div>
-                            <div class="title-text">Jumlaty</div>
-                            <div class="text">Ecommerce for Grocery</div>
-                        </div>
-                        <div className="seeAppButon">
-                            SEE APP
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className=" projectCardContainer">
-                <div className="projectCard">
-                    <div className="projectExpContainer">
-                        <div>
-                            <div class="title-text">Jumlaty</div>
-                            <div class="text">Ecommerce for Grocery</div>
-                        </div>
-                        <div className="seeAppButon">
-                            SEE APP
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
         </>
     )
 }
