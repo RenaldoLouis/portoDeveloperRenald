@@ -84,7 +84,33 @@ const Cover = () => {
                         </span>
                     </p>
 
-                    <span onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text2")} id="text2" className="navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text2" ? 7 : 5 }}>Louis</span>
+                    <span onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text2")} id="text2" className="fancy navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text2" ? 7 : 5 }}>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${1 * 1000}ms` }}>L</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${2 * 1000}ms` }}>O</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${3 * 1000}ms` }}>U</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${4 * 1000}ms` }}>I</span>
+                            </span>
+                        </span>
+                        <span className="outer">
+                            <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
+                                <span className="letter" style={{ animationDelay: `${5 * 1000}ms` }}>S</span>
+                            </span>
+                        </span>
+                    </span>
 
                     <div className="resumeButtonContainer" style={{ zIndex: 5 }}>
                         SEE RESUME
