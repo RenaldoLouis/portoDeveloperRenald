@@ -11,8 +11,38 @@ const Experience = () => {
             </div>
 
             <div className="container" style={{ paddingBottom: 25 }}>
-                <div>
-                    asd
+                <div class='line-container'>
+                    <div class='progress-line'>
+                        <div class='progress' style={{ width: "50%" }}>
+
+                        </div>
+                        <div class='status'>
+                            <div class='dot completed'>
+
+                            </div>
+                        </div>
+                        <div class='status'>
+                            <div class='dot completed'>
+
+                            </div>
+                        </div>
+                        <div class='status'>
+                            <div class='dot current'>
+
+                            </div>
+                        </div>
+                        <div class='status'>
+                            <div class='dot'>
+
+                            </div>
+                        </div>
+                        <div class='status'>
+                            <div class='dot'>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
