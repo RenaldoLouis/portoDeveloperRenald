@@ -29,14 +29,13 @@
         .dot {
             width: 15px;
             height: 15px;
-            border-radius: 50%;
-            background: white;
             border: 5px solid grey;
-            cursor: pointer;
+            // cursor: pointer;
 
             &.current {
-                background: white;
-                border: 5px solid orange;
+                // background: white;
+                border: 5px solid #3EE546;;
+                background:#3EE546;;
             }
 
             &.completed {

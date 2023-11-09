@@ -137,7 +137,7 @@
 }
 
 .navbarText{
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Roboto Mono', monospace !important;
   color: white; 
   text-align: center;
   text-transform: uppercase; 
@@ -178,10 +178,10 @@
 .sectionTitle{
   color: #101010;
   text-align: center;
-  font-family: Tomorrow;
+  font-family: 'Roboto Mono', monospace !important;
   font-size: 120px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 100%; /* 120px */
 }
 
