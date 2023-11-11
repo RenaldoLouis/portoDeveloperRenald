@@ -39,13 +39,13 @@ const Experience = () => {
                 </span>
             </div>
 
-            <div className="container" style={{ paddingBottom: 300 }}>
+            <div className="container" style={{ paddingBottom: 300, marginTop: 65 }}>
                 <div class='line-container'>
                     <div class='progress-line'>
                         {/* <div class='progress' style={{ width: "50%" }}/> */}
                         {experienceData.map((eachExperience) => (
                             <div key={eachExperience.title} class='status'>
-                                <div class={`dot ${eachExperience.status === "current" ? "current" : ""}`}>
+                                <div class={`dot ${eachExperience.status === "current" ? "current pulse" : ""}`}>
                                     <div style={{ marginTop: 64 }}>
                                         <div>
                                             {eachExperience.year}
