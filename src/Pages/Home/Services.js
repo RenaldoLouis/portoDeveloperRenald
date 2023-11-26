@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import codeBlock from "../../assets/images/codeBlock.jpg"
 
-const Services = () => {
+const Services = React.forwardRef((props, navbarRef) => {
+
     const boxRef1 = useRef([]);
 
     const servicesData = [
@@ -47,7 +48,6 @@ const Services = () => {
 
         return () => {
             observer.disconnect();
-
         };
     }, []);
 
@@ -57,7 +57,7 @@ const Services = () => {
                 <span className="sectionTitle">
                     Services
                 </span>
-            </div>
+            </div >
             <div class="container">
                 <div className="row ServicesContainer">
                     {servicesData.map((service, index) => (
@@ -77,42 +77,10 @@ const Services = () => {
                             </div>
                         </div>
                     ))}
-                    {/* <div className="col servicesWhiteBox">
-                        <div className="servicesHeader">
-                            <img src={codeBlock} alt="codeBlock" style={{ marginRight: 42 }}></img>
-                            <div>
-                                Website Full Stack Development
-                            </div>
-                        </div>
-                        <div style={{ margin: 25 }}>
-                            <ol>
-                                <li>Building responsive Single-Page-Apps (SPA) & PWA in React</li>
-                                <li>Building Awesome Mobile Application using Flutter</li>
-                                <li>Building RESTful APIs with Springboot and Docker</li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div className="col servicesWhiteBox">
-                        <div className="servicesHeader">
-                            <img src={codeBlock} alt="codeBlock" style={{ marginRight: 42 }}></img>
-                            <div>
-                                Mobile Application Full Stack Development
-                            </div>
-                        </div>
-                        <div style={{ margin: 25 }}>
-                            <ol>
-                                <li>Building responsive Single-Page-Apps (SPA) & PWA in React</li>
-                                <li>Building Awesome Mobile Application using Flutter</li>
-                                <li>Building RESTful APIs with Springboot and Docker</li>
-                                <h1 class="animate__animated animate__fadeInTopRight">An animated element</h1>
-
-                            </ol>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </>
     )
-}
+})
 
 export default Services;

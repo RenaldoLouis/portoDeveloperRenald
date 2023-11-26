@@ -1,31 +1,18 @@
 import React, { useEffect, useState } from "react";
 import navbarIcon from '../../assets/images/FRLIcon.svg';
 
-const listNavbarMenu = [
-    {
-        title: "Home"
-    },
-    {
-        title: "Services"
-    },
-    {
-        title: "Projects"
-    },
-    {
-        title: "Experience"
-    },
-    {
-        title: "Contact"
-    },
-]
+const Navbar = React.forwardRef((props, ref) => {
+    const { handleClick, listNavbarMenu } = props;
 
-const Navbar = () => {
     const [selectedItem, setSelectedItem] = useState("menuNavbar1");
-    const handleClickNavbar = (itemId) => {
-        setSelectedItem(itemId);
-    }
     const [navbarElement, setNavbarElement] = useState(null);
     const [pageIsScrolledDOwn, setPageIsScrolledDOwn] = useState(false);
+
+
+    const handleClickNavbar = (eachMenu, itemId) => {
+        handleClick(eachMenu.title);
+        setSelectedItem(itemId);
+    }
 
     useEffect(() => {
         var element = document.getElementById("navbar");
@@ -66,7 +53,7 @@ const Navbar = () => {
 
             <ul className="nav nav-pills">
                 {listNavbarMenu.map((eachMenu, index) => (
-                    <li className="nav-item" onClick={() => handleClickNavbar(`menuNavbar${index + 1}`)}>
+                    <li className="nav-item" onClick={() => handleClickNavbar(eachMenu, `menuNavbar${index + 1}`)}>
                         <div
                             className={`easeInTransition nav-link ${buttonBackground(index)}`}
                             style={{ color: textColor(index), cursor: "pointer" }}
@@ -78,6 +65,6 @@ const Navbar = () => {
             </ul>
         </nav>
     )
-}
+})
 
 export default Navbar;

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import linkedIn from '../../assets/images/cib_linkedin-in.svg';
 import instagram from '../../assets/images/ri_instagram-fill.svg';
 import github from '../../assets/images/teenyicons_github-solid.svg';
 
-const Footer = () => {
+const Footer = React.forwardRef((props, ref) => {
 
     return (
-        <div className="footer">
+        <div ref={(el) => ref.current["Contact"] = el} className="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-7" style={{ textAlign: "start" }}>
@@ -38,11 +38,8 @@ const Footer = () => {
                                 Messages
                             </div>
                             <textarea style={{ marginBottom: "10px" }} type="text" placeholder="Message" name="Message"></textarea>
-                            <button type="submit" value="Send" style={{ borderRadius: "0.25rem", padding: '6px', height: '100%' }}>Send</button>
+                            <button className="seeAppButon" type="submit" value="Send" style={{ marginLeft: 0, borderRadius: "0.25rem", padding: '6px', height: '100%' }}>Send</button>
                         </form>
-                        <div className="seeAppButon" style={{ marginLeft: 0 }}>
-                            SEE APP
-                        </div>
                     </div>
                     <div class="col-5" style={{ alignSelf: "center" }}>
                         <div style={{ marginBottom: 16 }}>
@@ -64,6 +61,6 @@ const Footer = () => {
             </div>
         </div >
     )
-}
+})
 
 export default Footer;

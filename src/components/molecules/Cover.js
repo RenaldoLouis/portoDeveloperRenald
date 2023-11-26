@@ -28,7 +28,7 @@ const softSkill = [
 
 ]
 
-const Cover = () => {
+const Cover = React.forwardRef((props, ref) => {
     const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
     const [currentlyHoveredText, setCurrentlyHoveredText] = useState(null)
 
@@ -37,9 +37,8 @@ const Cover = () => {
     }
 
 
-
     return (
-        <div>
+        <div ref={(el) => ref.current["Home"] = el}>
             <div className="coverImageContainer">
                 <div className="coverImage"></div>
                 <div className="screenOverlay"></div>
@@ -131,6 +130,6 @@ const Cover = () => {
             </div>
         </div >
     )
-}
+})
 
 export default Cover;
