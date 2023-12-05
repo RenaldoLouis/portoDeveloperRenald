@@ -1,6 +1,6 @@
 import React from "react";
 
-const Experience = () => {
+const Experience = React.forwardRef((props, ref) => {
     const experienceData = [
         {
             year: "2020",
@@ -32,7 +32,7 @@ const Experience = () => {
         }
     ]
     return (
-        <div>
+        <div ref={(el) => ref.current["Experience"] = el}>
             <div className="sectionTitleContainer">
                 <span className="sectionTitle">
                     Experience
@@ -68,6 +68,6 @@ const Experience = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Experience;

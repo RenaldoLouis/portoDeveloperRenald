@@ -29,8 +29,6 @@ const Home = () => {
         navbarRef.current[menu].scrollIntoView({ behavior: 'smooth' });
     };
 
-    console.log("navbarRef", navbarRef)
-
     return (
         <div style={{ background: "black" }}>
             <Navbar ref={navbarRef} handleClick={handleClick} listNavbarMenu={listNavbarMenu} />

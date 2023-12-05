@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Projects = () => {
+const Projects = React.forwardRef((props, ref) => {
 
     const [preElement, setPreElement] = useState(null);
 
@@ -69,7 +69,7 @@ const Projects = () => {
         }
     }
     return (
-        <>
+        <div ref={(el) => ref.current["Projects"] = el}>
             <div className="sectionTitleContainer">
                 <span className="sectionTitle">
                     Projects
@@ -92,8 +92,8 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     )
-}
+})
 
 export default Projects;

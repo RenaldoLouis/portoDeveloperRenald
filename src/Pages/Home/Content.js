@@ -10,7 +10,7 @@ const Content = React.forwardRef((props, ref) => {
         <div>
             <Cover ref={ref} />
             <div style={{ backgroundColor: "#E7E7E7" }}>
-                <Services navbarRef={ref} />
+                <Services ref={ref} />
                 <Projects ref={ref} />
                 <Experience ref={ref} />
             </div>

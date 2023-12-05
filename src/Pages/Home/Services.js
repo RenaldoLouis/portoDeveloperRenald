@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import codeBlock from "../../assets/images/codeBlock.jpg"
 
-const Services = React.forwardRef((props, navbarRef) => {
+const Services = React.forwardRef((props, ref) => {
 
     const boxRef1 = useRef([]);
 
@@ -52,7 +52,7 @@ const Services = React.forwardRef((props, navbarRef) => {
     }, []);
 
     return (
-        <>
+        <div ref={(el) => ref.current["Services"] = el}>
             <div className="sectionTitleContainer">
                 <span className="sectionTitle">
                     Services
@@ -79,7 +79,7 @@ const Services = React.forwardRef((props, navbarRef) => {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     )
 })
 
