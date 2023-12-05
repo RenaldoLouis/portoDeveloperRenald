@@ -3,10 +3,11 @@ import linkedIn from '../../assets/images/cib_linkedin-in.svg';
 import instagram from '../../assets/images/ri_instagram-fill.svg';
 import github from '../../assets/images/teenyicons_github-solid.svg';
 
-const Footer = React.forwardRef((props, ref) => {
+const Footer = (props) => {
+    const { navbarRef } = props
 
     return (
-        <div ref={(el) => ref.current["Contact"] = el} className="footer">
+        <div id="Contact" ref={(el) => navbarRef.current["Contact"] = el} className="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-7" style={{ textAlign: "start" }}>
@@ -61,6 +62,6 @@ const Footer = React.forwardRef((props, ref) => {
             </div>
         </div >
     )
-})
+}
 
 export default Footer;

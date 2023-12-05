@@ -4,18 +4,19 @@ import Services from "./Services";
 import Projects from "./Project";
 import Experience from "./Experience";
 
-const Content = React.forwardRef((props, ref) => {
+const Content = (props) => {
+    const { navbarRef } = props;
 
     return (
         <div>
-            <Cover ref={ref} />
+            <Cover navbarRef={navbarRef} />
             <div style={{ backgroundColor: "#E7E7E7" }}>
-                <Services ref={ref} />
-                <Projects ref={ref} />
-                <Experience ref={ref} />
+                <Services navbarRef={navbarRef} />
+                <Projects navbarRef={navbarRef} />
+                <Experience navbarRef={navbarRef} />
             </div>
         </div>
     )
-})
+}
 
 export default Content;

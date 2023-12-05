@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import navbarIcon from '../../assets/images/FRLIcon.svg';
 
-const Navbar = React.forwardRef((props, ref) => {
-    const { handleClick, listNavbarMenu } = props;
+const Navbar = React.forwardRef((props) => {
+    const { handleClick, listNavbarMenu, activeSection } = props;
 
     const [selectedItem, setSelectedItem] = useState("menuNavbar1");
     const [navbarElement, setNavbarElement] = useState(null);
@@ -46,6 +46,28 @@ const Navbar = React.forwardRef((props, ref) => {
             return selectedItem === `menuNavbar${index + 1}` ? "active" : ""
         }
     }
+
+    useEffect(() => {
+        switch (activeSection) {
+            case "Home":
+                setSelectedItem("menuNavbar1")
+                break;
+            case "Services":
+                setSelectedItem("menuNavbar2")
+                break;
+            case "Projects":
+                setSelectedItem("menuNavbar3")
+                break;
+            case "Experience":
+                setSelectedItem("menuNavbar4")
+                break;
+            case "Contact":
+                setSelectedItem("menuNavbar5")
+                break;
+            default:
+                setSelectedItem("menuNavbar1")
+        }
+    }, [activeSection])
 
     return (
         <nav id="navbar" className="easeInTransition navbar">

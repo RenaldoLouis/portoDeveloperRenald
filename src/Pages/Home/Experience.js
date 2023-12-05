@@ -1,6 +1,8 @@
 import React from "react";
 
-const Experience = React.forwardRef((props, ref) => {
+const Experience = (props) => {
+    const { navbarRef } = props;
+
     const experienceData = [
         {
             year: "2020",
@@ -32,14 +34,14 @@ const Experience = React.forwardRef((props, ref) => {
         }
     ]
     return (
-        <div ref={(el) => ref.current["Experience"] = el}>
+        <div id="Experience" ref={(el) => navbarRef.current["Experience"] = el}>
             <div className="sectionTitleContainer">
                 <span className="sectionTitle">
                     Experience
                 </span>
             </div>
 
-            <div className="container" style={{ paddingBottom: 300, marginTop: 65 }}>
+            <div className="container" style={{ paddingBottom: 300, marginTop: 65, width: "100vh" }}>
                 <div class='line-container'>
                     <div class='progress-line'>
                         {/* <div class='progress' style={{ width: "50%" }}/> */}
@@ -68,6 +70,6 @@ const Experience = React.forwardRef((props, ref) => {
             </div>
         </div>
     )
-})
+}
 
 export default Experience;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const Projects = React.forwardRef((props, ref) => {
+const Projects = (props) => {
+    const { navbarRef } = props;
 
     const [preElement, setPreElement] = useState(null);
 
@@ -69,7 +70,7 @@ const Projects = React.forwardRef((props, ref) => {
         }
     }
     return (
-        <div ref={(el) => ref.current["Projects"] = el}>
+        <div id="Projects" ref={(el) => navbarRef.current["Projects"] = el}>
             <div className="sectionTitleContainer">
                 <span className="sectionTitle">
                     Projects
@@ -94,6 +95,6 @@ const Projects = React.forwardRef((props, ref) => {
             </div>
         </div>
     )
-})
+}
 
 export default Projects;
