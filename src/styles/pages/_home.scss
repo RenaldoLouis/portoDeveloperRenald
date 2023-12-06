@@ -1,30 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 @media (min-width: 900px) {
-    .mx-w-50 {
-      max-width: 50% !important;
-    }
+  .mx-w-50 {
+    max-width: 50% !important;
   }
+}
 
-  .cardShadow{
-    box-shadow: $shadowBackground;
-  }
+.cardShadow {
+  box-shadow: $shadowBackground;
+}
 
- .home {
+.home {
   width: 100%;
   height: 100vh;
+
   &-coverImage {
-      width: 100%;
-      height: 100vh;
-      margin: 0px 0px 15px 0px;
-      object-fit: cover;
-    }
+    width: 100%;
+    height: 100vh;
+    margin: 0px 0px 15px 0px;
+    object-fit: cover;
   }
-.carousel-heigth{
+}
+
+.carousel-heigth {
   height: 100%;
 }
 
-.coverImageContainer{
+.coverImageContainer {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -36,9 +38,9 @@
   z-index: 10;
 }
 
-.screenOverlay{
+.screenOverlay {
   background-size: 100% 9px !important;
-  background: linear-gradient(rgba($rgbDarkCover, 0.3),rgba($rgbDarkCover, 0.3) 3px,transparent 3px,transparent 9px);
+  background: linear-gradient(rgba($rgbDarkCover, 0.3), rgba($rgbDarkCover, 0.3) 3px, transparent 3px, transparent 9px);
   height: 100%;
   width: 100%;
   animation: pan-overlay 22s infinite linear;
@@ -50,65 +52,69 @@
   from {
     background-position: 0% 0%;
   }
-  
+
   to {
     background-position: 0% -100%;
   }
 }
 
-@keyframes pan-image {  
+@keyframes pan-image {
   0% {
     background-position: 36% 42%;
     background-size: 200%;
   }
-  
+
   20% {
     background-position: 30% 35%;
     background-size: 200%;
   }
-  
-  20.0001% { /* -- View 2 -- */
+
+  20.0001% {
+    /* -- View 2 -- */
     background-position: 60% 85%;
     background-size: 500%;
   }
-  
+
   40% {
     background-position: 49% 81%;
     background-size: 500%;
   }
-  
-  40.0001% { /* -- View 3 -- */
+
+  40.0001% {
+    /* -- View 3 -- */
     background-position: 80% 42%;
     background-size: 300%;
   }
-  
+
   60% {
     background-position: 84% 33%;
     background-size: 300%;
   }
-  
-  60.0001% { /* -- View 4 -- */
+
+  60.0001% {
+    /* -- View 4 -- */
     background-position: 0% 0%;
     background-size: 300%;
   }
-  
+
   80% {
     background-position: 15% 4%;
     background-size: 300%;
   }
-  
-  80.0001% { /* -- View 5 -- */
+
+  80.0001% {
+    /* -- View 5 -- */
     background-position: 80% 10%;
     background-size: 300%;
   }
-  
+
   100% {
     background-position: 72% 14%;
     background-size: 300%;
   }
 }
 
-.coverImage{
+.coverImage {
   background-image: url('../../assets/images/binaryWallpaperCover.jpg');
   height: 100%;
   width: 100%;
@@ -123,7 +129,7 @@
   animation: pan-image 15s linear infinite;
 }
 
-.coverContent{
+.coverContent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,84 +144,89 @@
   border-radius: 0.6rem;
 }
 
-.navbarText{
+.navbarText {
   font-family: 'Roboto Mono', monospace !important;
-  color: white; 
+  color: white;
   text-align: center;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   position: relative;
   font-size: 4.25rem;
-  &-small{
+
+  &-small {
     font-size: 1.25rem;
   }
-  &-medium{
+
+  &-medium {
     font-size: 2.25rem;
   }
-  &-big{
+
+  &-big {
     font-size: 120px;
   }
 }
 
-.whiteBox{
+.whiteBox {
   background: white;
   height: 8px;
   width: 8px;
 }
 
-.pill{
+.pill {
   border: 1px solid #FFF;
   border-radius: 100px;
   padding: 10px 24px;
-  color:white;
+  color: white;
 }
 
-.pillContainer{
+.pillContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 34px;
+  flex-wrap: wrap;
 }
 
-.sectionTitle{
+.sectionTitle {
   color: #101010;
   text-align: center;
   font-family: 'Tomorrow', monospace !important;
   font-size: 120px;
   font-style: normal;
   // font-weight: bold;
-  line-height: 100%; /* 120px */
+  line-height: 100%;
+  /* 120px */
 }
 
-.sectionTitleContainer{
+.sectionTitleContainer {
   padding: 55px;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 
-.servicesWhiteBox{
+.servicesWhiteBox {
   width: 532px;
   height: 312px;
   border-radius: 8px;
   border: 1px solid #E7E7E7;
   background: #FFF;
-  padding:0 !important;
+  padding: 0 !important;
   text-align: center;
 }
 
-.ServicesContainer{
+.ServicesContainer {
   gap: 50px !important;
 }
 
-.servicesHeader{
+.servicesHeader {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #E7E7E7; 
+  border-bottom: 1px solid #E7E7E7;
   padding-bottom: 23px;
 }
 
-.nameTitle{
+.nameTitle {
   width: 32rem;
   line-height: 100%;
   text-align: center;

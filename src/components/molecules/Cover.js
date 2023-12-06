@@ -20,10 +20,16 @@ const softSkill = [
         name: "NodeJs"
     },
     {
+        name: "NextJs"
+    },
+    {
         name: "Flutter"
     },
     {
         name: "Springboot"
+    },
+    {
+        name: "Docker"
     },
 
 ]
@@ -36,6 +42,10 @@ const Cover = (props) => {
 
     const handleHoverContent = (elementId) => {
         setCurrentlyHoveredText(elementId)
+    }
+
+    const handleClickOpenResume = () => {
+        window.open("https://drive.google.com/file/d/1iEmuqGGFMQQMoGGfKLj-Z9kQZb8fvVH_/view");
     }
 
     return (
@@ -85,34 +95,34 @@ const Cover = (props) => {
                     </p>
 
                     <span onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text2")} id="text2" className="fancy navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text2" ? 7 : 5 }}>
-                        <span className="outer">
+                        <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
                                 <span className="letter" style={{ animationDelay: `${1 * 1000}ms` }}>L</span>
                             </span>
                         </span>
-                        <span className="outer">
+                        <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
                                 <span className="letter" style={{ animationDelay: `${2 * 1000}ms` }}>O</span>
                             </span>
                         </span>
-                        <span className="outer">
+                        <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
                                 <span className="letter" style={{ animationDelay: `${3 * 1000}ms` }}>U</span>
                             </span>
                         </span>
-                        <span className="outer">
+                        <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
                                 <span className="letter" style={{ animationDelay: `${4 * 1000}ms` }}>I</span>
                             </span>
                         </span>
-                        <span className="outer">
+                        <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
                                 <span className="letter" style={{ animationDelay: `${5 * 1000}ms` }}>S</span>
                             </span>
                         </span>
                     </span>
 
-                    <div className="resumeButtonContainer" style={{ zIndex: 5 }}>
+                    <div className="resumeButtonContainer" style={{ zIndex: 5, cursor: "pointer" }} onClick={handleClickOpenResume}>
                         SEE RESUME
                     </div>
                     <div style={{ display: "flex", alignItems: "center", marginTop: 55, zIndex: 5 }}>
