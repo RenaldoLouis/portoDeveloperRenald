@@ -3,6 +3,7 @@ import Cover from "../../components/molecules/Cover";
 import Services from "./Services";
 import Projects from "./Project";
 import Experience from "./Experience";
+import ProjectWithHoverEffect from "./ProjectWithHoverEffect";
 
 const Content = (props) => {
     const { navbarRef } = props;
@@ -12,7 +13,8 @@ const Content = (props) => {
             <Cover navbarRef={navbarRef} />
             <div style={{ backgroundColor: "#E7E7E7" }}>
                 <Services navbarRef={navbarRef} />
-                <Projects navbarRef={navbarRef} />
+                {/* <Projects navbarRef={navbarRef} /> */}
+                <ProjectWithHoverEffect navbarRef={navbarRef} />
                 <Experience navbarRef={navbarRef} />
             </div>
         </div>

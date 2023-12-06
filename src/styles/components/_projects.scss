@@ -1,4 +1,4 @@
-.projectCardContainer{
+.projectCardContainer {
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -7,40 +7,114 @@
   flex-wrap: wrap;
 }
 
-.projectCard{
+.projectCard {
   width: 466px;
   height: 466px;
   position: relative;
-  background-image: url('../../assets/images/jumlatyLogo.png');
-  background-size: auto;
+  // background-image: url('../../assets/images/jumlatyLogo.png');
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
 }
 
-.projectExpContainer{
-  background-color: #101010;
-  height: 30%; /* This makes the bottom half black */
+.projectCard:hover{
+  transform: scale(1.05);
+}
+
+.projectExpContainer {
+  --padding:1.5rem;
+  background: linear-gradient(
+      hsl(0 0% 0%/0),
+      hsl(20 0% 0%/ 0.3) 15%,
+      hsl(0 0% 0% /1)
+    );
+  padding-left: var(--padding);
+  padding-top: var(--padding);
+  height: 40%;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-evenly;
+  // align-items: center;
+  transform: translateY(60%);
+  transition: transform 500ms ease;
+}
+
+.projectCard:hover .projectExpContainer{
+  transform: translateY(0);
+  transition-delay: 500ms;
+}
+
+.projectExpContainer > * :not(.title-text) {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.seeAppButonProject {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.projectCard:hover .projectExpContainer > * :not(.title-text) {
+  opacity: 1;
+  transition-delay: 1000ms;
+}
+
+.projectCard:hover .seeAppButonProject {
+  opacity: 1;
+  transition-delay: 1000ms;
 }
 
 .title-text {
-  color: white; 
+  color: white;
   text-align: left;
   font-weight: 700;
-  padding-left: 20px;
+  // padding-left: 20px;
+  position: relative;
+  width: max-content;
+  padding-bottom: 5px;
   // padding-top: 20px; 
 }
+
+.title-text::after {
+ content: "";
+ position: absolute;
+ height: 4px;
+ width: calc(100% + var(--padding));
+ background: #3EE546;
+ left: calc(var(--padding) * -1);
+ bottom: 0;
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 500ms ease;
+}
+
+.projectCard:hover .title-text::after{
+  transform: scaleX(1);
+}
+
+
 .text {
-  color: white; 
+  color: white;
   text-align: left;
-  padding-left: 20px;
+  // padding-left: 20px;
   text-wrap: nowrap;
+}
+
+.seeAppButonProject{
+  background: #3EE546;
+  padding: 12px;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  margin-top: 8px;
+  border-radius: 4px;
+  cursor: pointer;
 }
