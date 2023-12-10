@@ -2,6 +2,7 @@
   "name": "new_porto",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://renaldolouis.com/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@popperjs/core": "^2.11.6",
