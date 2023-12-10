@@ -10,22 +10,26 @@ const ProjectWithHoverEffect = (props) => {
 
     const projectData = [
         {
-            title: "Jumlaty", desc: "Ecommerce for Grocery", link: `url(${jumlatyLogo})`
+            title: "Jumlaty", desc: "Ecommerce for Grocery", image: `url(${jumlatyLogo})`, link: "https://play.google.com/store/apps/details?id=com.jumlaty.customer&hl=en&gl=US"
         },
         {
-            title: "Hisabi", desc: "Record & Track Inventory", link: `url(${hisabiLogo})`
+            title: "Hisabi", desc: "Application to Record & Track Inventory", image: `url(${hisabiLogo})`, link: "https://play.google.com/store/apps/details?id=com.hisabi&hl=en&gl=US"
         },
         {
-            title: "RawatKulit", desc: "Informative Web", link: `url(${rawatKulitLogo})`
+            title: "RawatKulit", desc: "Informative Web", image: `url(${rawatKulitLogo})`, link: "https://rawatkulit.netlify.app/home"
         },
         {
-            title: "Masareefy", desc: "Track Expenses", link: `url(${masareefyLogo})`
+            title: "Masareefy", desc: "Help Business to Track Expenses", image: `url(${masareefyLogo})`, link: "https://play.google.com/store/apps/details?id=com.appsqueue.masareef&hl=en&gl=US"
         },
         {
-            title: "Alphaverse", desc: "NFT Wallet", link: `url(${ethereumLogo})`
+            title: "Alphaverse", desc: "NFT Wallet", image: `url(${ethereumLogo})`, link: ""
         },
 
     ]
+
+    const handleOpenApp = (link) => {
+        window.open(link);
+    }
 
     return (
         <div id="Projects" ref={(el) => navbarRef.current["Projects"] = el}>
@@ -37,14 +41,14 @@ const ProjectWithHoverEffect = (props) => {
             <div className="container">
                 <div className=" projectCardContainer">
                     {projectData.map((eachProject) => (
-                        <div id={eachProject.title} className="projectCard" style={{ backgroundImage: eachProject.link }}>
+                        <div id={eachProject.title} className="projectCard" style={{ backgroundImage: eachProject.image }}>
                             <div className="projectExpContainer">
                                 <div>
                                     <h2 className="title-text">{eachProject.title}</h2>
                                     <p className="text">{eachProject.desc}</p>
                                 </div>
-                                <div className="seeAppButonProject">
-                                    SEE APP
+                                <div className="seeAppButonProject" style={{ cursor: eachProject.link === "" ? "default" : "", background: eachProject.link === "" ? "#545b62" : "" }} onClick={() => eachProject.link === "" ? null : handleOpenApp(eachProject.link)}>
+                                    {eachProject.link === "" ? "COMING SOON" : "SEE APP"}
                                 </div>
                             </div>
                         </div>

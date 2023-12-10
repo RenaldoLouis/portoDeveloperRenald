@@ -9,15 +9,33 @@ const Services = (props) => {
     const servicesData = [
         {
             title: "Website Full Stack Development",
-            skills1: "Building responsive Single-Page-Apps (SPA) & PWA in React",
-            skills2: "Building Awesome Mobile Application using Flutter",
-            skills3: "Building RESTful APIs with Springboot and Docker",
+            skills: [
+                {
+                    skill: "Build responsive Single-Page-Apps (SPA) & PWA in React",
+                },
+                {
+
+                    skill: "Create Any Complex System using nodeJs and react",
+                },
+                {
+                    skill: "Build RESTful APIs with Golang and Docker",
+                }
+            ]
+
         },
         {
             title: "Mobile Application Full Stack Development",
-            skills1: "Building Robust App using Flutter",
-            skills2: "Build secure mobile apps using firebase and golang",
-            skills3: "Create App integrated with any 3rd party apps like Discord,Google Maps,etc",
+            skills: [
+                {
+                    skill: "Build Robust App using Flutter",
+                },
+                {
+                    skill: "Build secure mobile apps using flutter and golang with firebase",
+                },
+                {
+                    skill: "Integrate application with any 3rd party apps like Discord,Google Maps,etc",
+                }
+            ]
         },
     ]
 
@@ -70,10 +88,9 @@ const Services = (props) => {
                                 </div>
                             </div>
                             <div style={{ margin: 25 }}>
-                                <ol>
-                                    <li>{service.skills1}</li>
-                                    <li>{service.skills2}</li>
-                                    <li>{service.skills3}</li>
+                                <ol> {service.skills.map((eachServies) => (
+                                    <li>{eachServies.skill}</li>
+                                ))}
                                 </ol>
                             </div>
                         </div>

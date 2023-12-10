@@ -6,6 +6,10 @@ import github from '../../assets/images/teenyicons_github-solid.svg';
 const Footer = (props) => {
     const { navbarRef } = props
 
+    const handleClickSocMed = (link) => {
+        window.open(link)
+    }
+
     return (
         <div id="Contact" ref={(el) => navbarRef.current["Contact"] = el} className="footer">
             <div class="container">
@@ -47,13 +51,13 @@ const Footer = (props) => {
                             you can explore more about me through
                         </div>
                         <div className="contactContainer">
-                            <div className="socialMediaContainer">
+                            <div className="socialMediaContainer" onClick={() => handleClickSocMed("https://www.linkedin.com/in/renaldo-louis/")}>
                                 <img src={linkedIn} alt="linkedin"></img>
                             </div>
-                            <div className="socialMediaContainer">
+                            <div className="socialMediaContainer" onClick={() => handleClickSocMed("https://github.com/RenaldoLouis")}>
                                 <img src={github} alt="github"></img>
                             </div>
-                            <div className="socialMediaContainer">
+                            <div className="socialMediaContainer" onClick={() => handleClickSocMed("https://instagram.com/renaldo_louis?igshid=NGVhN2U2NjQ0Yg==")}>
                                 <img src={instagram} alt="instagram"></img>
                             </div>
                         </div>
