@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import navbarIcon from '../../assets/images/FRLIcon.svg';
+import { DataContext } from "../../context/DataContext";
 
 const Navbar = React.forwardRef((props) => {
     const { handleClick, listNavbarMenu, activeSection } = props;
+    const DataContextValue = useContext(DataContext)
 
     const [selectedItem, setSelectedItem] = useState("menuNavbar1");
     const [navbarElement, setNavbarElement] = useState(null);
     const [pageIsScrolledDOwn, setPageIsScrolledDOwn] = useState(false);
-
 
     const handleClickNavbar = (eachMenu, itemId) => {
         handleClick(eachMenu.title);
@@ -73,18 +74,29 @@ const Navbar = React.forwardRef((props) => {
         <nav id="navbar" className="easeInTransition navbar">
             <img className="logoContainer" src={navbarIcon} alt="ang" ></img>
 
-            <ul className="nav nav-pills">
-                {listNavbarMenu.map((eachMenu, index) => (
-                    <li className="nav-item" onClick={() => handleClickNavbar(eachMenu, `menuNavbar${index + 1}`)}>
-                        <div
-                            className={`easeInTransition nav-link ${buttonBackground(index)}`}
-                            style={{ color: textColor(index), cursor: "pointer" }}
-                        >
-                            {eachMenu.title}
-                        </div>
-                    </li>
-                ))}
-            </ul>
+            {DataContextValue.windowWidth <= 650 ?
+                (
+                    <div>
+                        asd
+                    </div>
+                )
+                :
+                (
+                    <ul className="nav nav-pills">
+                        {listNavbarMenu.map((eachMenu, index) => (
+                            <li className="nav-item" onClick={() => handleClickNavbar(eachMenu, `menuNavbar${index + 1}`)}>
+                                <div
+                                    className={`easeInTransition nav-link ${buttonBackground(index)}`}
+                                    style={{ color: textColor(index), cursor: "pointer" }}
+                                >
+                                    {eachMenu.title}
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                )
+            }
+
         </nav>
     )
 })

@@ -187,16 +187,41 @@
   flex-wrap: wrap;
 }
 
+.pillContainerScrollable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 34px;
+  // flex-wrap: wrap;
+  // width: calc(100vh - 500px);
+  width: 100%;
+  white-space: nowrap;
+  // overflow-x: auto;
+}
+
 .sectionTitle {
   color: #101010;
   text-align: center;
   font-family: 'Tomorrow', monospace !important;
   font-size: 120px;
   font-style: normal;
-  // font-weight: bold;
   line-height: 100%;
-  /* 120px */
 }
+
+@media screen and (max-width: 700px) {
+  .sectionTitle {
+    color: #101010;
+    text-align: center;
+    font-family: 'Tomorrow', monospace !important;
+    font-size: 68px;
+    font-style: normal;
+    line-height: 100%;
+  }
+}
+
+
+
 
 .sectionTitleContainer {
   padding: 55px;
@@ -205,12 +230,12 @@
 }
 
 .servicesWhiteBox {
-  width: 532px;
-  height: 312px;
+  // width: 532px;
+  min-height: 312px;
   border-radius: 8px;
   border: 1px solid #E7E7E7;
   background: #FFF;
-  padding: 0 !important;
+  // padding: 0 !important;
   text-align: center;
 }
 
@@ -227,7 +252,63 @@
 }
 
 .nameTitle {
-  width: 32rem;
-  line-height: 100%;
+  width: 100%;
+  line-height: 85px;
   text-align: center;
+}
+
+
+@media screen and (max-width: 550px) {
+  .letter{
+  font-size: 75px;
+  }
+  .nameTitle {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.scroll-container {
+  overflow: hidden;
+  z-index: 5;
+  width: calc(100vh - 505px);
+}
+
+@media screen and (max-width: 460px) {
+  .scroll-text {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }

@@ -10,6 +10,23 @@ export const DataContextProvider = (props) => {
 
     const [supportsPWA, setSupportsPWA] = useState(false);
     const [showInstallMessage, setShowInstallMessage] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+        setWindowHeight(window.innerHeight);
+    };
+
+    useEffect(() => {
+        // Add event listener when component mounts
+        window.addEventListener('resize', handleResize);
+
+        // Remove event listener when component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const getPWADisplayMode = () => {
         const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
@@ -77,7 +94,9 @@ export const DataContextProvider = (props) => {
         PWAData,
         showInstallMessage,
         supportsPWA,
-        downloadApp
+        downloadApp,
+        windowWidth,
+        windowHeight
     }
 
     return (

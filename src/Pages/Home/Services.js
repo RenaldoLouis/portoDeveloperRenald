@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import codeBlock from "../../assets/images/codeBlock.jpg"
+import { DataContext } from "../../context/DataContext";
 
 const Services = (props) => {
     const { navbarRef } = props
 
     const boxRef1 = useRef([]);
+    const DataContextValue = useContext(DataContext)
 
     const servicesData = [
         {
@@ -46,10 +48,10 @@ const Services = (props) => {
                     if (entry.isIntersecting) {
                         if (index === entries.length - 1) {
                             entry.target.classList.add('animate__animated');
-                            entry.target.classList.add('animate__fadeInTopRight');
+                            entry.target.classList.add('animate__backInDown');
                         } else {
                             entry.target.classList.add('animate__animated');
-                            entry.target.classList.add('animate__fadeInTopLeft');
+                            entry.target.classList.add('animate__backInDown');
                         }
                     }
                 });
@@ -77,21 +79,23 @@ const Services = (props) => {
                     Services
                 </span>
             </div >
-            <div class="container">
-                <div className="row ServicesContainer">
+            <div class="container px-4 text-center">
+                <div className="row gx-5 gy-5">
                     {servicesData.map((service, index) => (
-                        <div ref={(el) => boxRef1.current[index] = el} className="col servicesWhiteBox">
-                            <div className="servicesHeader">
-                                <img src={codeBlock} alt="codeBlock" style={{ marginRight: 42 }}></img>
-                                <div>
-                                    {service.title}
+                        <div ref={(el) => boxRef1.current[index] = el} className="col-sm-12 col-md-6 ">
+                            <div className="servicesWhiteBox">
+                                <div className="servicesHeader">
+                                    <img src={codeBlock} alt="codeBlock" style={{ marginRight: 42 }}></img>
+                                    <div>
+                                        {service.title}
+                                    </div>
                                 </div>
-                            </div>
-                            <div style={{ margin: 25 }}>
-                                <ol> {service.skills.map((eachServies) => (
-                                    <li>{eachServies.skill}</li>
-                                ))}
-                                </ol>
+                                <div style={{ margin: 25 }}>
+                                    <ol> {service.skills.map((eachServies) => (
+                                        <li>{eachServies.skill}</li>
+                                    ))}
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     ))}

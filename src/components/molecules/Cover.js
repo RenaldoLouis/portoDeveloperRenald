@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../atom/navbar";
 import Pill from "../atom/Pill";
 import Blanket from "../atom/Blanket";
+import { DataContext } from "../../context/DataContext";
 
 const softSkill = [
     {
@@ -36,6 +37,7 @@ const softSkill = [
 
 const Cover = (props) => {
     const { navbarRef } = props
+    const DataContextValue = useContext(DataContext)
 
     const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
     const [currentlyHoveredText, setCurrentlyHoveredText] = useState(null)
@@ -54,70 +56,70 @@ const Cover = (props) => {
                 <div className="coverImage"></div>
                 <div className="screenOverlay"></div>
                 <div className="coverContent">
-                    <span className="navbarText navbarText-medium" style={{ zIndex: 5 }}>A Full Stack Web Developer and Mobile App Developer</span>
+                    <span className="navbarText navbarText-medium" style={{ zIndex: 5, marginBottom: 15 }}>A Full Stack Web Developer and Mobile App Developer</span>
 
-                    <p onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text1")} id="text1" className="fancy navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text1" ? 7 : 5 }}>
+                    <p onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text1")} id="text1" className="fancy  nameTitle" style={{ zIndex: currentlyHoveredText === "text1" ? 7 : 5 }}>
                         <span className="outer">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${1 * 1000}ms` }}>R</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${1 * 1000}ms` }}>R</span>
                             </span>
                         </span>
                         <span className="outer">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${2 * 1000}ms` }}>E</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${2 * 1000}ms` }}>E</span>
                             </span>
                         </span>
                         <span className="outer">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${3 * 1000}ms` }}>N</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${3 * 1000}ms` }}>N</span>
                             </span>
                         </span>
                         <span className="outer">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${4 * 1000}ms` }}>A</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${4 * 1000}ms` }}>A</span>
                             </span>
                         </span>
                         <span className="outer">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${5 * 1000}ms` }}>L</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${5 * 1000}ms` }}>L</span>
                             </span>
                         </span>
                         <span className="outer">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${6 * 1000}ms` }}>D</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${6 * 1000}ms` }}>D</span>
                             </span>
                         </span>
                         <span className="outer">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${7 * 1000}ms` }}>O</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${7 * 1000}ms` }}>O</span>
                             </span>
                         </span>
                     </p>
 
-                    <span onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text2")} id="text2" className="fancy navbarText navbarText-big nameTitle" style={{ zIndex: currentlyHoveredText === "text2" ? 7 : 5 }}>
+                    <span onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text2")} id="text2" className="fancy nameTitle" style={{ zIndex: currentlyHoveredText === "text2" ? 7 : 5 }}>
                         <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${1 * 1000}ms` }}>L</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${1 * 1000}ms` }}>L</span>
                             </span>
                         </span>
                         <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${2 * 1000}ms` }}>O</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${2 * 1000}ms` }}>O</span>
                             </span>
                         </span>
                         <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${3 * 1000}ms` }}>U</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${3 * 1000}ms` }}>U</span>
                             </span>
                         </span>
                         <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${4 * 1000}ms` }}>I</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${4 * 1000}ms` }}>I</span>
                             </span>
                         </span>
                         <span className="outer2">
                             <span className="inner" style={{ animationDelay: `${rand(-5000, 0)}ms` }}>
-                                <span className="letter" style={{ animationDelay: `${5 * 1000}ms` }}>S</span>
+                                <span className="letter navbarText navbarText-big" style={{ animationDelay: `${5 * 1000}ms` }}>S</span>
                             </span>
                         </span>
                     </span>
@@ -125,16 +127,33 @@ const Cover = (props) => {
                     <div className="resumeButtonContainer" style={{ zIndex: 5, cursor: "pointer" }} onClick={handleClickOpenResume}>
                         SEE RESUME
                     </div>
-                    <div style={{ display: "flex", alignItems: "center", marginTop: 55, zIndex: 5 }}>
+                    <div style={{ display: "flex", alignItems: "center", marginTop: 10, zIndex: 5 }}>
                         <div className="whiteBox" />
                         <span style={{ margin: "0px 12px" }} className="navbarText navbarText-small">Building web & application with</span>
                         <div className="whiteBox" />
                     </div>
-                    <div className="pillContainer" style={{ zIndex: 5 }}>
-                        {softSkill.map((eachSkill, index) => (
-                            <Pill key={index} name={eachSkill.name} />
-                        ))}
-                    </div>
+
+                    {DataContextValue.windowWidth <= 460 ?
+                        (
+                            <div className="scroll-container" >
+                                <div className="scroll-text pillContainerScrollable" style={{ zIndex: 5 }}>
+                                    {softSkill.map((eachSkill, index) => (
+                                        <Pill key={index} name={eachSkill.name} />
+                                    ))}
+                                </div>
+                            </div>
+                        )
+                        :
+                        (
+                            <div className="scroll-text pillContainer" style={{ zIndex: 5 }}>
+                                {softSkill.map((eachSkill, index) => (
+                                    <Pill key={index} name={eachSkill.name} />
+                                ))}
+                            </div>
+                        )
+                    }
+
+
                 </div>
 
                 <Blanket currentlyHoveredText={currentlyHoveredText} />
