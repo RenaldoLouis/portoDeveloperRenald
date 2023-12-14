@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { DataContext } from "../../context/DataContext";
 import LineStep from "../../components/molecules/LineStep";
 import Timeline from "../../components/molecules/Timeline";
 
 const Experience = (props) => {
-    const { navbarRef } = props;
+    const { navbarRef, activeSection } = props;
     const DataContextValue = useContext(DataContext)
 
     const experienceData = [
@@ -49,7 +49,9 @@ const Experience = (props) => {
                 experienceData={experienceData}
             /> */}
 
-            <Timeline />
+            {activeSection === "Experience" && (
+                <Timeline />
+            )}
 
         </div>
     )

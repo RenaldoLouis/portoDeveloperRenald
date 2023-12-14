@@ -6,7 +6,7 @@ import Experience from "./Experience";
 import ProjectWithHoverEffect from "./ProjectWithHoverEffect";
 
 const Content = (props) => {
-    const { navbarRef } = props;
+    const { navbarRef, activeSection } = props;
 
     return (
         <div>
@@ -15,7 +15,7 @@ const Content = (props) => {
                 <Services navbarRef={navbarRef} />
                 {/* <Projects navbarRef={navbarRef} /> */}
                 <ProjectWithHoverEffect navbarRef={navbarRef} />
-                <Experience navbarRef={navbarRef} />
+                <Experience navbarRef={navbarRef} activeSection={activeSection} />
             </div>
         </div>
     )

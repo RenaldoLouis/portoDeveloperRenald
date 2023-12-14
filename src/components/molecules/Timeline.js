@@ -1,8 +1,7 @@
 import React from "react";
 import toyota from '../../assets/images/toyota.png';
 
-const Timeline = () => {
-
+const Timeline = (props) => {
     return (
         <div className="container">
             <div className="timeline">
@@ -11,7 +10,7 @@ const Timeline = () => {
                     <div className="text-box">
                         <h2>ALphabet.inc</h2>
                         <small>2018-2019</small>
-                        <p>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
+                        <p style={{ overflowWrap: "anywhere" }}>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
                     </div>
                     <span className="left-container-arrow"></span>
                 </div>
@@ -20,7 +19,7 @@ const Timeline = () => {
                     <div className="text-box">
                         <h2>ALphabet.inc</h2>
                         <small>2018-2019</small>
-                        <p>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
+                        <p style={{ overflowWrap: "anywhere" }}>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
                     </div>
                     <span className="right-container-arrow"></span>
                 </div>
@@ -29,7 +28,7 @@ const Timeline = () => {
                     <div className="text-box">
                         <h2>ALphabet.inc</h2>
                         <small>2018-2019</small>
-                        <p>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
+                        <p style={{ overflowWrap: "anywhere" }}>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
                     </div>
                     <span className="left-container-arrow"></span>
                 </div>
@@ -38,7 +37,7 @@ const Timeline = () => {
                     <div className="text-box">
                         <h2>ALphabet.inc</h2>
                         <small>2018-2019</small>
-                        <p>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
+                        <p style={{ overflowWrap: "anywhere" }}>adasdasdaksjdojfsodivowimvoivdsnvoiejij</p>
                     </div>
                     <span className="right-container-arrow"></span>
                 </div>

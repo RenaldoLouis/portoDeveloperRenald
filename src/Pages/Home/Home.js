@@ -65,6 +65,7 @@ const Home = () => {
             <Navbar activeSection={activeSection} handleClick={handleClick} listNavbarMenu={listNavbarMenu} />
             <Content
                 navbarRef={navbarRef}
+                activeSection={activeSection}
             />
             <Footer
                 navbarRef={navbarRef}
