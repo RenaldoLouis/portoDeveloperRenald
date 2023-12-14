@@ -22,7 +22,9 @@ const Footer = (props) => {
                             <div style={{ background: "white", borderRadius: 25, padding: "0px 8px 0px 8px", height: "100%" }}>
                                 <div style={{ color: "black", padding: "4px 2px 4px 0px", display: "flex", alignItems: "center" }}>
                                     <div className="pulse" style={{ width: 8, height: 8, background: "#3EE546", borderRadius: 35, margin: "0px 8px 0px 0px" }} />
-                                    Online
+                                    <div className="onlineText">
+                                        Online
+                                    </div>
                                 </div>
                             </div>
                         </div>

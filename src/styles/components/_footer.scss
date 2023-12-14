@@ -33,3 +33,10 @@
    border-radius: 25px;
    cursor: pointer;
  }
+
+
+ @media (max-width: 320px) {
+  .onlineText{
+    font-size: 9px;
+  }
+}
