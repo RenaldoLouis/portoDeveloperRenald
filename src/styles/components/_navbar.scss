@@ -88,3 +88,24 @@
 .whiteBackground {
     background-color: white;
 }
+
+@media (max-width:650px) {
+    .navbarMobile{
+        height: fit-content;
+        padding: 10px 15px 10px 15px !important;
+        position: fixed !important;
+        top: 8%;
+        z-index: 11;
+        width: 100%;
+        background: white;
+        text-align: center;   
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-20px); /* Start position, adjust as needed */
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Transition properties */
+    }
+
+    .navbarMobile.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* End position, adjust as needed */
+    }
+}

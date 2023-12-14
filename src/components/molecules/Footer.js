@@ -14,7 +14,7 @@ const Footer = (props) => {
         <div id="Contact" ref={(el) => navbarRef.current["Contact"] = el} className="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-7" style={{ textAlign: "start" }}>
+                    <div class="col-sm-12 col-md-6" style={{ textAlign: "start" }}>
                         <div style={{ display: "flex", alignItems: "center" }}>
                             <div className="sectionTitle" style={{ color: "white", marginRight: 8 }}>
                                 Contact
@@ -26,7 +26,7 @@ const Footer = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div >
+                        <div style={{ marginBottom: 15 }}>
                             Discuss a project for just want to say hi? My inbox is open for all
                         </div>
                         <form action="mailto:renaldolouis555@gmail.com?subject=Customer Data"
@@ -46,7 +46,7 @@ const Footer = (props) => {
                             <button className="seeAppButon" type="submit" value="Send" style={{ marginLeft: 0, borderRadius: "0.25rem", padding: '6px', height: '100%' }}>Send</button>
                         </form>
                     </div>
-                    <div class="col-5" style={{ alignSelf: "center" }}>
+                    <div class="col-sm-12 col-md-6" style={{ alignSelf: "center", marginTop: 50 }}>
                         <div style={{ marginBottom: 16 }}>
                             you can explore more about me through
                         </div>

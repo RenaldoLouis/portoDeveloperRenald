@@ -82,7 +82,7 @@ const Services = (props) => {
             <div class="container px-4 text-center">
                 <div className="row gx-5 gy-5">
                     {servicesData.map((service, index) => (
-                        <div ref={(el) => boxRef1.current[index] = el} className="col-sm-12 col-md-6 ">
+                        <div ref={(el) => boxRef1.current[index] = el} className="col-sm-12 col-md-6">
                             <div className="servicesWhiteBox">
                                 <div className="servicesHeader">
                                     <img src={codeBlock} alt="codeBlock" style={{ marginRight: 42 }}></img>
