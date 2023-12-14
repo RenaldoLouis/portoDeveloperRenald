@@ -151,7 +151,7 @@ const Navbar = React.forwardRef((props) => {
             </nav>
             <div className={`navbarMobile ${isShowMobileNavbar ? 'show' : ''}`} style={{ display: DataContextValue.windowWidth <= 650 ? "" : "none" }}>
                 {listNavbarMenu.map((eachMenu, index) => (
-                    <div onClick={() => handleClickNavbar(eachMenu, `menuNavbar${index + 1}`)}>
+                    <div onClick={() => isShowMobileNavbar ? handleClickNavbar(eachMenu, `menuNavbar${index + 1}`) : {}}>
                         <div
                             style={{ color: "black", cursor: "pointer", margin: "8px 0px 8px 0px" }}
                         >
