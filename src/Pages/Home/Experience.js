@@ -7,6 +7,14 @@ const Experience = (props) => {
     const { navbarRef, activeSection } = props;
     const DataContextValue = useContext(DataContext)
 
+    const [isVisible, setIsvisible] = useState(false)
+
+    useEffect(() => {
+        if (activeSection === "Experience" || activeSection === "Contact") {
+            setIsvisible(true)
+        }
+    }, [activeSection])
+
     const experienceData = [
         {
             year: "2020",
@@ -49,7 +57,7 @@ const Experience = (props) => {
                 experienceData={experienceData}
             /> */}
 
-            {activeSection === "Experience" && (
+            {isVisible && (
                 <Timeline />
             )}
 

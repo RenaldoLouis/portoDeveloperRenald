@@ -220,6 +220,17 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  .sectionTitle {
+    color: #101010;
+    text-align: center;
+    font-family: 'Tomorrow', monospace !important;
+    font-size: 50px;
+    font-style: normal;
+    line-height: 100%;
+  }
+}
+
 
 
 
