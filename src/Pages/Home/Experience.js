@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../context/DataContext";
 import LineStep from "../../components/molecules/LineStep";
+import Timeline from "../../components/molecules/Timeline";
 
 const Experience = (props) => {
     const { navbarRef } = props;
@@ -37,7 +38,7 @@ const Experience = (props) => {
         }
     ]
     return (
-        <div id="Experience" ref={(el) => navbarRef.current["Experience"] = el}>
+        <div id="Experience" ref={(el) => navbarRef.current["Experience"] = el} style={{ paddingBottom: 100 }}>
             <div className="sectionTitleContainer">
                 <span className="sectionTitle">
                     Experience
@@ -47,6 +48,8 @@ const Experience = (props) => {
             {/* <LineStep
                 experienceData={experienceData}
             /> */}
+
+            <Timeline />
 
         </div>
     )
