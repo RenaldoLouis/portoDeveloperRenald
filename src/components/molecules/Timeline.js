@@ -9,7 +9,7 @@ const Timeline = (props) => {
         <div className="container">
             <div className="timeline">
                 <div className="timelineContainer left-container">
-                    <img alt="bnilife" src={bnilife}></img>
+                    <img alt="bnilife" style={{ background: "white" }} src={bnilife}></img>
                     <div className="text-box">
                         <h2>BNI Life</h2>
                         <div>Dec 2019 - Jul 2020</div>
