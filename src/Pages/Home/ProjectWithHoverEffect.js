@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import jumlatyLogo from "../../assets/images/jumlatyLogo.png"
 import hisabiLogo from "../../assets/images/hisabi.jpg"
+import apcsLogo from "../../assets/images/apcsLogo.png"
 import rawatKulitLogo from "../../assets/images/rawatKulit.PNG"
 import masareefyLogo from "../../assets/images/masareefy.png"
 import ethereumLogo from "../../assets/images/ethereum.jpg"
@@ -9,6 +10,9 @@ const ProjectWithHoverEffect = (props) => {
     const { navbarRef } = props;
 
     const projectData = [
+        {
+            title: "Apcs Music", desc: "Orchestra Informational Website", image: `url(${apcsLogo})`, link: "https://www.apcsmusic.com/"
+        },
         {
             title: "Jumlaty", desc: "Ecommerce for Grocery", image: `url(${jumlatyLogo})`, link: "https://play.google.com/store/apps/details?id=com.jumlaty.customer&hl=en&gl=US"
         },
