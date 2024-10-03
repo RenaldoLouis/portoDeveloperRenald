@@ -56,7 +56,7 @@ const Cover = (props) => {
                 <div className="coverImage"></div>
                 <div className="screenOverlay"></div>
                 <div className="coverContent">
-                    <span className="navbarText navbarText-medium" style={{ zIndex: 5 }}>A Full Stack Web Developer and Mobile App Developer</span>
+                    <span className="navbarText navbarText-medium" style={{ zIndex: 5, marginBottom: 16 }}>A Full Stack Web Developer and Mobile App Developer</span>
 
                     <p onMouseLeave={() => handleHoverContent(null)} onMouseOver={() => handleHoverContent("text1")} id="text1" className="fancy  nameTitle" style={{ zIndex: currentlyHoveredText === "text1" ? 7 : 5 }}>
                         <span className="outer">
@@ -152,7 +152,6 @@ const Cover = (props) => {
                             </div>
                         )
                     }
-
 
                 </div>
 
