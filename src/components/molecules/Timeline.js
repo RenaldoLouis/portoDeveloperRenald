@@ -2,6 +2,7 @@ import React from "react";
 import bnilife from '../../assets/images/bnilife.png';
 import proint from '../../assets/images/proint.jpeg';
 import tenxers from '../../assets/images/10xers.jpeg';
+import apcs from '../../assets/images/apcsLogo.png';
 import commsult from '../../assets/images/commsult.jpeg';
 
 const Timeline = (props) => {
@@ -39,6 +40,16 @@ const Timeline = (props) => {
                     <span className="left-container-arrow"></span>
                 </div>
                 <div className="timelineContainer right-container">
+                    <img alt="APCS" src={apcs}></img>
+                    <div className="text-box">
+                        <h2>APCS Studio</h2>
+                        <div>May 2024 - Present</div>
+                        <h5>IT Manager</h5>
+                        <p style={{ overflowWrap: "anywhere" }}>Developed a responsive company website with a ticketing system, email notifications, and data-driven UX improvements, enhancing event management and user engagement.</p>
+                    </div>
+                    <span className="left-container-arrow"></span>
+                </div>
+                <div className="timelineContainer left-container">
                     <img alt="commsult" src={commsult}></img>
                     <div className="text-box">
                         <h2>commsult AG</h2>

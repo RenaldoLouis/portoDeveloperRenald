@@ -47,7 +47,7 @@ const Cover = (props) => {
     }
 
     const handleClickOpenResume = () => {
-        window.open("https://drive.google.com/file/d/152DOKg7tihm8KV60vtoH9LlOTPpcTrjD/view?usp=sharing");
+        window.open("https://drive.google.com/file/d/1BanWLkT8ZikZQYJXUSGunUdNFtyOVBF-/view?usp=drive_link");
     }
 
     return (
